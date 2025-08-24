@@ -91,7 +91,7 @@
                         <p>
                             Допомагаю знаходити гармонію між свідомістю та підсвідомістю,
                             звільнятись від обмежуючих установок і відновлювати внутрішню силу.
-                            Індивідуальні чистки, ритуали, діагностика, психологічні та підтримуюча терапія.
+                            Індивідуальні чистки, ритуали, діагностика, розбори та підтримуюча терапія.
                         </p>
                     </div>
                     <div class="hero-buttons">
@@ -393,7 +393,7 @@
                                 </button></span><span>від 5000 грн</span>
 
                         </div>
-                        <div class="price-row"><span>Розбір сутностей <button class="btn btn-mini js-open-modal"
+                        <div class="price-row"><span>Розбір <button class="btn btn-mini js-open-modal"
                                     data-service="Розбір сутностей" data-price="5000 грн · до 2 год"
                                     data-desc="Це не просто консультація, а шлях до справжніх змін. Я поєдную психологічні знання, метод легалізації правди, регрес та яснобачення, щоб допомогти вам дістатися до кореня проблеми.
 
@@ -560,7 +560,7 @@
                     <div class="course-body">
                         <h3>Ритуальні чистки</h3>
                         <div class="course-meta">
-                            <span class="price">7500 грн</span>
+                            <span class="price">2500 грн</span>
                         </div>
                         <a href="https://t.me/Chernenko_Anastasiia2307" target="_blank"
                             class="btn btn-primary">Замовити</a>
@@ -957,17 +957,16 @@
                 titleEl.textContent = data.service || 'Послуга';
                 priceEl.textContent = data.price || '';
                 textEl.innerHTML = data.desc || '';
-
                 tg1.href = buildTGMessage(data.service, data.price);
 
                 modal.setAttribute('aria-hidden', 'false');
-                document.body.classList.add('body-lock');
+                document.body.classList.add('body-lock', 'modal-open');
                 modal.querySelector('.modal-close').focus();
             }
 
             function closeModal() {
                 modal.setAttribute('aria-hidden', 'true');
-                document.body.classList.remove('body-lock');
+                document.body.classList.remove('modal-open', 'body-lock');
                 if (lastFocused) lastFocused.focus();
             }
 
@@ -990,6 +989,8 @@
                 }
             });
         })();
+
+
     </script>
 
 

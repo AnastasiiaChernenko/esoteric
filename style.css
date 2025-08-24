@@ -1191,52 +1191,57 @@ section {
 .modal[aria-hidden='true'] {
   display: none;
 }
+
 .modal {
   position: fixed;
   inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: auto;
+  padding: 6vh 12px 4vh;
   z-index: 1000;
 }
+
 .modal-backdrop {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(5px);
+  z-index: 0;
 }
+
 .modal-dialog {
   position: relative;
   z-index: 1;
   width: min(680px, 92vw);
-  margin: 15px auto;
-  background-image: url(images/modal.jpg);
-  background-size: cover;
+  max-height: calc(100vh - 10vh);
+  overflow: auto;
+  overflow-x: hidden;
+  padding: 28px 22px 22px;
   border: 2px solid var(--text);
   box-shadow: 0 0 26px rgba(203, 183, 145, 0.75);
-  padding: 28px 22px 22px;
-  overflow-x: hidden;
-  overflow-y: scroll;
+
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url(images/modal.jpg) center/cover no-repeat;
 }
 
-.modal-dialog::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.6);
-  top: 0;
-  left: 0;
-  right: -10px;
-  bottom: -10px;
+@media (max-width: 700px) {
+  .modal {
+    padding: 12px 8px;
+  }
+  .modal-dialog {
+    margin: 0 auto;
+    max-height: 92vh;
+  }
 }
 
 .modal-dialog > * {
   position: relative;
   z-index: 1;
-}
-.modal-dialog::after {
-  content: '';
-  position: absolute;
-  inset: -12px;
-  border: 2px solid var(--text);
-  pointer-events: none;
 }
 
 .modal-dialog .title {

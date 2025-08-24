@@ -1373,7 +1373,7 @@ section {
 .contacts-brand {
   display: grid;
   justify-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .contacts-brand img {
@@ -1406,6 +1406,8 @@ section {
   gap: 25px;
   flex-wrap: wrap;
   justify-content: center;
+  font-weight: bold;
+  margin-bottom: 40px;
 }
 
 .contact-buttons .btn {

@@ -577,6 +577,13 @@ section {
   text-align: right;
 }
 
+.price-row span:last-child b {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+
 .socials .btn {
   display: inline-flex;
   align-items: center;
@@ -684,6 +691,9 @@ section {
     margin: auto;
   }
   .price-row span {
+    text-align: center;
+  }
+  .price-row span:last-child {
     text-align: center;
   }
 }

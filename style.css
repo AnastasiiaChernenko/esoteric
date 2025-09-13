@@ -941,6 +941,11 @@ section {
   padding: 18px;
   display: grid;
   gap: 12px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 .course-body h3 {
   font-size: 18px;
